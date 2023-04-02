@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "singularName": "unit",
+    "pluralName": "units",
+    "displayName": "Unit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "army": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::army.army",
+      "inversedBy": "units"
+    }
+  }
+}

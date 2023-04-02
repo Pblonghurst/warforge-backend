@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_missions_mission_texts",
+  "info": {
+    "displayName": "missionText",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "vp": {
+      "type": "integer"
+    }
+  }
+}
