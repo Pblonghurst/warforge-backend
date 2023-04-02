@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "armies",
+  "info": {
+    "singularName": "army",
+    "pluralName": "armies",
+    "displayName": "Army",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "units": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::unit.unit",
+      "mappedBy": "army"
+    }
+  }
+}
