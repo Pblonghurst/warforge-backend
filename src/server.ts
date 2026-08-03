@@ -1,14 +1,18 @@
 import express, { type Express, type Request, type Response } from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import test from './routes/test.ts';
+
+dotenv.config({ path: 'env' });
 
 const app: Express = express();
 
-app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5000'],
-}));
+const port = process.env.PORT ?? 5000;
+const corsOrigin = process.env.CORS_ORIGIN ?? 'http://localhost:3000';
 
-const test = require('./routes/test');
+app.use(cors({
+  origin: corsOrigin,
+}));
 
 app.use('/test', test);
 
@@ -16,6 +20,6 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!');
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
