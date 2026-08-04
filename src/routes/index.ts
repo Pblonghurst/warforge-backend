@@ -5,6 +5,6 @@ import testTwo from "./features/test-two/test-two.routes.ts";
 const router = Router();
 
 router.use('/test', test);
-router.use('/testTwo', testTwo);
+router.use('/test-two', testTwo);
 
 export default router;
